@@ -1,0 +1,3 @@
+// the comfigured options and settings for tutorial
+#define TUTORIAL_VERSION_MAJOR @TUTORIAL_VERSION_MAJOR@
+#define TUTORIAL_VERSION_MINOR @TUTORIAL_VERSION_MINOR@
