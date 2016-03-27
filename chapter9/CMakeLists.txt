@@ -27,3 +27,13 @@ ENDIF (USE_MYMATH)
 # add the executable
 ADD_EXECUTABLE (tutorial tutorial.cc)
 TARGET_LINK_LIBRARIES(tutorial ${EXTRA_LIBS})
+
+INSTALL (TARGETS tutorial DESTINATION bin)
+INSTALL (FILES "${PROJECT_BINARY_DIR}/TutorialConfig.h" DESTINATION include)
+
+INCLUDE (CTest)
+ADD_TEST (TutorialRuns tutorial 25)
+
+ADD_TEST (TutorialComp25 tutorial 25)
+
+SET_TESTS_PROPERTIES (TutorialComp25 PROPERTIES PASS_REGULAR_EXPRESSION "25 is 5")
