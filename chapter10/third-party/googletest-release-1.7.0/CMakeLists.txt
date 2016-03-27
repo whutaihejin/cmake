@@ -67,8 +67,7 @@ link_directories(${PROJECT_BINARY_DIR}/src)
 # Defines the gtest & gtest_main libraries.  User tests should link
 # with one of them.
 
-set (LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)
-message (STATUS "1=${PROJECT_SOURCE_DIR} 2=${LIBRARY_OUTPUT_PATH}")
+set (LIBRARY_OUTPUT_PATH ${library_path})
 
 # Google Test libraries.  We build them using more strict warnings than what
 # are used for other targets, to ensure that gtest can be compiled by a user
